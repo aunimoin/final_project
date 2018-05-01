@@ -47,7 +47,7 @@ bluebird.js - this is a fully-featured Promise library for JavaScript. The stron
 CORS - Cross-Origin Requests allows you to configure the web API's security. It has to do with allowing other domains to make requests against your web API. For example, if you had your web API on one server and your web app on another you could configure CORS in your Web API to allow your web app to make calls to your web API.
 
 slugify - this package is used to generating a valid URL, generally using data already obtained. Spaces aren't valid in URLs, and they need to be replaced by %20 which is ugly. But with slugify,
-"www.saturdays.com/the%20best%20events" become "www.saturdays.com/the-best-events".
+"www.foodtrucks.com/the%20halal%20guys" become "www.foodtrucks.com/the-halal-guys".
 
 pg-promise -
 
