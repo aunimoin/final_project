@@ -1,0 +1,14 @@
+{
+  "name": "Project_4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@git.generalassemb.ly:aunimoin/project_4.git",
+  "author": "Auni Moin <auni.moin@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "react-google-maps": "^9.4.5",
+    "yelp-fusion": "^2.0.3"
+  }
+}
