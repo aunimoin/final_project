@@ -57,7 +57,7 @@ class App extends Component {
                 onChange={this.handleInputChange}
                 value={this.state.search} />
             </label>
-            <input class="btn" type="submit" value="Search" />
+            <input className="btn" type="submit" value="Search" />
           </p>
         </form>
 

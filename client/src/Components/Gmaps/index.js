@@ -7,7 +7,10 @@ class Gmaps extends Component {
     apiDataLoaded: false
 
   }
+
+
   render() {
+
     let markers = this.props.foodTruckData ? (
       this.props.foodTruckData.map(truck =>(
         <Marker position={{ lat: truck.coordinates.latitude, lng: truck.coordinates.longitude }}
@@ -15,12 +18,21 @@ class Gmaps extends Component {
       ))) : (
         <p>Loading...</p>
       )
+      let center = this.props.foodTruckData ? (
+        {lat: this.props.foodTruckData[0].coordinates.latitude,
+          lng: this.props.foodTruckData[0].coordinates.longitude
+        }
+        ) : (
+          { lat: 40.7398848, lng: -73.9922705 }
+        )
 
     const MyMapComponent = withGoogleMap(props => (
 
+
       <GoogleMap
-        defaultCenter = { { lat: 40.7398848, lng: -73.9922705 } }
-        defaultZoom = { 13 }
+        center={center}
+        // defaultCenter = { { lat: 40.7398848, lng: -73.9922705 } }
+        zoom = { 12 }
       >
 
       {markers}
