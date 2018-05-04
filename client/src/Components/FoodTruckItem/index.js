@@ -14,7 +14,7 @@ const FoodTruckItem = props => {
         <h5 className='details'>Lat: {coordinates.latitude}</h5>
         <h5 className='details'>Lng: {coordinates.longitude}</h5>
 
-        <img className='photo' src={image_url} />
+        <img className='image' src={image_url} />
       </div>
     </div>
   )

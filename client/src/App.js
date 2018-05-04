@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 import './App.css'
 import FoodTruckList from './Components/FoodTruckList'
 import FoodTruckItem from './Components/FoodTruckItem'
-
 import Gmaps from './Components/Gmaps'
+
 
 const yelp = require('yelp-fusion');
 
@@ -70,7 +70,9 @@ class App extends Component {
         </div>
 
         <div>
-          <Gmaps />
+          <Gmaps foodTruckData={this.state.foodTruckData}
+          apiDataLoaded={this.state.apiDataLoaded}
+          />
         </div>
       </div>
     )
