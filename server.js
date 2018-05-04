@@ -44,5 +44,5 @@ app.get("/api/:location", food, (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`Mimi & Tim are the BOMB, now on port ${PORT}`);
+  console.log(`MIMI & TIM are the BOMB, now on port ${PORT}`);
 });
