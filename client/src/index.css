@@ -3,11 +3,15 @@ body {
   margin: 0;
   padding: 10px;
   font-family: "Acme", sans-serif;
-  background-color: #9df2a4;
+  background-color: #baddff;
 }
-
+.btn {
+  font-family: "Acme", sans-serif;
+  border-radius: 5px;
+}
 .image {
-  max-width: 70px;
+  max-width: 50px;
+  border-radius: 10px;
 }
 .big-div {
   display: flex;
@@ -19,12 +23,20 @@ body {
   max-height: 200px;
   justify-content: space-between;
   padding: 5px;
-  border: 1px solid grey;
-  margin-bottom: 3px;
-  background-color: #d3ffe9;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  background-color: #f2f7f0;
 }
-
+.food-truck-details {
+  padding: 5px;
+}
 .map {
+  display: flex;
+  justify-content: left;
   position: fixed;
   padding: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+  margin-left: 5px;
 }

@@ -16,8 +16,22 @@ const MyMapComponent = withGoogleMap(props => (
 class Gmaps extends Component {
   constructor(props) {
     super(props);
-    apiDataLoaded: false;
+    this.state = {
+      apiDataLoaded: false,
+      isOpen: false
+    };
   }
+  handleToggleOpen = () => {
+    this.setState({
+      isOpen: true
+    });
+  };
+
+  handleToggleClose = () => {
+    this.setState({
+      isOpen: false
+    });
+  };
 
   render() {
     let markers = this.props.foodTruckData ? (
@@ -28,7 +42,14 @@ class Gmaps extends Component {
             lng: truck.coordinates.longitude
           }}
           key={truck.id}
-        />
+          onClick={() => this.handleToggleOpen(this.props.id)}
+        >
+          {this.state.isOpen && (
+            <InfoWindow onCloseClick={this.props.handleCloseCall}>
+              <h3>{truck.name}</h3>
+            </InfoWindow>
+          )}
+        </Marker>
       ))
     ) : (
       <p> ® Auni Moin</p>
