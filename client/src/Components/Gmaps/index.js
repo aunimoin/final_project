@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import "../../App.css";
-import {
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-  InfoWindow
-} from "react-google-maps";
+import InfoWindowComp from "../InfoWindowComp";
+import { withGoogleMap, GoogleMap } from "react-google-maps";
 
 const MyMapComponent = withGoogleMap(props => (
   <GoogleMap center={props.center} zoom={12}>
@@ -17,39 +13,13 @@ class Gmaps extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      apiDataLoaded: false,
-      isOpen: false
+      apiDataLoaded: false
     };
   }
-  handleToggleOpen = () => {
-    this.setState({
-      isOpen: true
-    });
-  };
-
-  handleToggleClose = () => {
-    this.setState({
-      isOpen: false
-    });
-  };
-
   render() {
     let markers = this.props.foodTruckData ? (
       this.props.foodTruckData.map(truck => (
-        <Marker
-          position={{
-            lat: truck.coordinates.latitude,
-            lng: truck.coordinates.longitude
-          }}
-          key={truck.id}
-          onClick={() => this.handleToggleOpen(this.props.id)}
-        >
-          {this.state.isOpen && (
-            <InfoWindow onCloseClick={this.props.handleCloseCall}>
-              <h3>{truck.name}</h3>
-            </InfoWindow>
-          )}
-        </Marker>
+        <InfoWindowComp truck={truck} key={truck.id} />
       ))
     ) : (
       <p> ® Auni Moin</p>
