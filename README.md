@@ -2,8 +2,6 @@
 
 G-maps-api: https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/
 
-
-
 A readme.md file with:
 Explanations of the technologies used.
 A couple of paragraphs about the general approach you took.
@@ -50,13 +48,9 @@ bluebird.js - this is a fully-featured Promise library for JavaScript. The stron
 
 CORS - Cross-Origin Requests allows you to configure the web API's security. It has to do with allowing other domains to make requests against your web API. For example, if you had your web API on one server and your web app on another you could configure CORS in your Web API to allow your web app to make calls to your web API.
 
-slugify - this package is used to generating a valid URL, generally using data already obtained. Spaces aren't valid in URLs, and they need to be replaced by %20 which is ugly. But with slugify,
-"www.saturdays.com/the%20best%20events" become "www.saturdays.com/the-best-events".
-
 pg-promise -
 
 yarn add --save google-maps-react - in root dir - https://medium.com/@yelstin.fernandes/render-a-map-component-using-react-google-maps-5f7fb3e418bb
-
 
 #Milestone 1 User Stories
 1 - As a food truck lover, I want to go to a website to see food trucks in a desired area.
