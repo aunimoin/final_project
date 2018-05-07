@@ -1,21 +1,20 @@
-import React, { Component } from 'react'
-import './App.css'
-import FoodTruckList from './Components/FoodTruckList'
-import FoodTruckItem from './Components/FoodTruckItem'
-import Gmaps from './Components/Gmaps'
+import React, { Component } from "react";
+import "./App.css";
+import FoodTruckList from "./Components/FoodTruckList";
+import FoodTruckItem from "./Components/FoodTruckItem";
+import Gmaps from "./Components/Gmaps";
 
-
-const yelp = require('yelp-fusion');
+const yelp = require("yelp-fusion");
 
 class App extends Component {
-  constructor (props) {
-    super()
+  constructor(props) {
+    super();
     this.state = {
       apiDataLoaded: false,
       foodTruckData: null,
       search: ""
-    }
-    this.apiData = this.apiData.bind(this)
+    };
+    this.apiData = this.apiData.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
@@ -27,7 +26,7 @@ class App extends Component {
   onSubmit(evt) {
     evt.preventDefault();
 
-    this.apiData()
+    this.apiData();
   }
   // fetch data from yelp's api via my server
   // componentDidMount() {
@@ -41,43 +40,49 @@ class App extends Component {
         this.setState({
           apiDataLoaded: true,
           foodTruckData: res.data
-        })
-      })
+        });
+      });
   }
 
-  render () {
+  render() {
     return (
       <div>
+        <div className="logo">
+          <h1>Food Trucks Only!</h1>
+        </div>
+
         <form onSubmit={this.onSubmit}>
           <p>
             <label>
-              Find Food Trucks{" "}
+              Enter Zip Code or city, state{" "}
               <input
                 type="text"
                 onChange={this.handleInputChange}
-                value={this.state.search} />
+                value={this.state.search}
+              />
             </label>
-            <input className="btn" type="submit" value="Search" />
+            <input className="btn" type="submit" value="Find Food Trucks" />
           </p>
         </form>
+        <div className="big-div">
+          <div className="food-truck-list">
+            {this.state.foodTruckData ? (
+              <FoodTruckList foodTruckData={this.state.foodTruckData} />
+            ) : (
+              <p />
+            )}
+          </div>
 
-      <div className="food-truck-cont">
-        {this.state.foodTruckData ? (
-          <FoodTruckList foodTruckData={this.state.foodTruckData} />
-        ) : (
-          <p>Loading, please wait...</p>
-        )}
-        </div>
-
-        <div>
-          <Gmaps foodTruckData={this.state.foodTruckData}
-          apiDataLoaded={this.state.apiDataLoaded}
-          />
+          <div classname="map">
+            <Gmaps
+              foodTruckData={this.state.foodTruckData}
+              apiDataLoaded={this.state.apiDataLoaded}
+            />
+          </div>
         </div>
       </div>
-    )
+    );
   }
 }
-
 
 export default App;

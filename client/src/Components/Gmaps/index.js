@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "../../App.css";
 import {
   withGoogleMap,
   GoogleMap,
@@ -30,7 +31,7 @@ class Gmaps extends Component {
         />
       ))
     ) : (
-      <p>Loading...</p>
+      <p> ® Auni Moin</p>
     );
     let center = this.props.foodTruckData
       ? {
@@ -51,31 +52,4 @@ class Gmaps extends Component {
     );
   }
 }
-const MapWithAMakredInfoWindow = compose(
-  withStateHandlers(
-    () => ({
-      isOpen: false
-    }),
-    {
-      onToggleOpen: ({ isOpen }) => () => ({
-        isOpen: !isOpen
-      })
-    }
-  ),
-  withScriptjs,
-  withGoogleMap
-)(props => (
-  <GoogleMap defaultZoom={8} defaultCenter={{ lat: -34.397, lng: 150.644 }}>
-    <Marker
-      position={{ lat: -34.397, lng: 150.644 }}
-      onClick={props.onToggleOpen}
-    >
-      {props.isOpen && (
-        <InfoWindow onCloseClick={props.onToggleOpen}>
-          <FaAnchor />
-        </InfoWindow>
-      )}
-    </Marker>
-  </GoogleMap>
-));
 export default Gmaps;

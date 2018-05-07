@@ -1,5 +1,30 @@
 body {
+  display: flex;
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  padding: 10px;
+  font-family: "Acme", sans-serif;
+  background-color: #9df2a4;
+}
+
+.image {
+  max-width: 70px;
+}
+.big-div {
+  display: flex;
+  justify-content: space-around;
+}
+.food-truck-list-item {
+  display: flex;
+  flex-direction: row;
+  max-height: 200px;
+  justify-content: space-between;
+  padding: 5px;
+  border: 1px solid grey;
+  margin-bottom: 3px;
+  background-color: #d3ffe9;
+}
+
+.map {
+  position: fixed;
+  padding: 10px;
 }
