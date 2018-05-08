@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import FoodTruckList from "./Components/FoodTruckList";
 import FoodTruckItem from "./Components/FoodTruckItem";
 import Gmaps from "./Components/Gmaps";
