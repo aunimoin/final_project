@@ -30,7 +30,7 @@ class InfoWindowComp extends Component {
         onClick={() => this.handleToggleOpen()}
       >
         {this.state.isOpen && (
-          <InfoWindow onCloseClick={this.props.handleCloseCall}>
+          <InfoWindow onCloseClick={this.handleToggleClose}>
             <h3>{this.props.truck.name}</h3>
           </InfoWindow>
         )}

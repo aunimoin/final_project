@@ -73,7 +73,7 @@ class App extends Component {
             )}
           </div>
 
-          <div className="ap">
+          <div className="app">
             <Gmaps
               foodTruckData={this.state.foodTruckData}
               apiDataLoaded={this.state.apiDataLoaded}

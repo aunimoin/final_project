@@ -1,37 +1,22 @@
-# Final Project (4) - Food Truck App
-
-G-maps-api: https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/
-
-A readme.md file with:
-Explanations of the technologies used.
-A couple of paragraphs about the general approach you took.
-Installation instructions for any dependencies.
-Link to your ERDs - Diagrams of your models and their relationships.
-Link to your user stories – who are your users, what do they want, and why?
-Link to your wireframes – sketches of views and interfaces in your application.
-Descriptions of any unsolved problems or hurdles your team had to overcome.
+## Final Project (4) - Food Truck App
 
 ## Overview & General Approach
 
-I'm building a simpler version of Yelp but just for food trucks. The app will let people register/create a profile, then ask them to input a Zip Code, which will take them to their
-home page. Logging in, if they already have a profile, will also ask them to input a Zip Code,
-which will take the user to their home page that will display a list of food trucks with their
-name, address, and a small photo. And next to the list will be a google map window of the
-desired Zip Code along with markers for the food trucks that are on the list. Users will also
-be able to add a food truck to their "favorites" list, which will be populated on the right
-side of the app.
+MVP:
+I'm building a simpler version of Yelp, but just for food trucks. The app will let people input a Zip Code or city (& state), which will return a list of food trucks (up to 20, per Yelp's API docs) and a google maps component with markers. Clicking on the markers will open a Google maps "InfoWindow", which will display the name of the food truck.
 
-Initially, I had a similar idea but for beers. Finding and getting an API key for a beer db
-was a massive challenge, so I moved on to food trucks. Next I spent 4+ hours trying to
-get data from Yelp's API so that I could see the pieces of information I could display.
+PostMVP:
+Food truck lovers will be able to log in (user auth), and "favorite" food trucks, which will be displayed on a second list, similar to the first one. And each user's profile
+page will have a list of their favorite food trucks, plus a Google Maps component that
+will display the US map with markers for their favorites.
 
-The wifeframes were fun to create, and now I'm working on the different pieces - user auth,
-db, fetching data from Yelp with Zip Code, displaying that area and the food trucks on
-google maps, and saving the favorites to a db.
+Initially, I had a similar idea but for beers. However, finding and getting an API key for a beer db was a challenge, so I moved on to food trucks. Next I spent 4+ hours trying to get data from Yelp's API so that I could see the pieces of information I could display.
 
-#Modules / Technologies
+The wifeframes were fun to create, which layed out the foundation of my app. Now I'm working on the different pieces - fetching data from Yelp with Zip Code, displaying that area and the food trucks on Google maps, and (user auth,db,) saving the favorites to a db.
 
-react - this is a JS library for building user interfaces. It allows you to create highly reusable UI components that are on single page web apps, such as, tab bars, comment boxes, pop up modals, lists, sortable tables, etc.
+## Modules / Technologies
+
+React - this is a JS library for building user interfaces. It allows you to create highly reusable UI components that are on single page web apps, such as, tab bars, comment boxes, pop up modals, lists, sortable tables, etc.
 
 react-router-dom - this package is a part of React Router and it's required for websites that will
 run in browsers.
@@ -64,7 +49,7 @@ where they are located.
 
 5 - As a food cart lover, I want to see the carts on a map so I have an idea of their locations.
 
-#Milestone 2 User Stories
+##Milestone 2 User Stories
 6 - As a street food lover, I want to add certain carts to my favorites list.
 
 7 - As a food truck lover, I want to create a profile so that I can log in any time to see
@@ -74,5 +59,22 @@ Wifeframes (use markdown-preview, "ctrl-shift-m")
 ![Login & Homepage](./Wireframes/P4-a.jpg)
 ![Favorites & Food Trucks pages](./Wireframes/P4-b.jpg)
 
-#ERD
+##ERD
 ![ERD](./ERD.png)
+
+## References:
+
+Yelp Fusion API:
+https://www.yelp.com/developers/documentation/v3/business_search
+Google Map API: https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/
+Google Map InfoWindow reference:
+https://github.com/tomchentw/react-google-maps/issues/753
+
+A readme.md file with:
+Explanations of the technologies used.
+A couple of paragraphs about the general approach you took.
+Installation instructions for any dependencies.
+Link to your ERDs - Diagrams of your models and their relationships.
+Link to your user stories – who are your users, what do they want, and why?
+Link to your wireframes – sketches of views and interfaces in your application.
+Descriptions of any unsolved problems or hurdles your team had to overcome.
