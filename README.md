@@ -59,7 +59,13 @@ Wifeframes (use markdown-preview, "ctrl-shift-m")
 
 ## References:
 
+<<<<<<< HEAD
 Yelp Fusion API - https://www.yelp.com/developers/documentation/v3/business_search
 Google Maps API/Platform - https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/
 Google Map InfoWindow reference -
 https://github.com/tomchentw/react-google-maps/issues/753
+=======
+Yelp Fusion API: https://www.yelp.com/developers/documentation/v3/business_search
+Google Map API: https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/
+Google Map InfoWindow reference: https://github.com/tomchentw/react-google-maps/issues/753
+>>>>>>> 31a1cfe58f5dc8ff3ec20bccd3720b4bac6ac12a
