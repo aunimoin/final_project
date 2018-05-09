@@ -1,4 +1,4 @@
-## Final Project (4) - Food Truck App
+## Final Project - Food Truck App
 
 ## Overview & General Approach
 
@@ -20,19 +20,17 @@ React - this is a JS library for building user interfaces. It allows you to crea
 
 React-router-dom - this package is a part of React Router and it's required for websites that will run in browsers.
 
-Express -
+Express - this is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
 CORS - Cross-Origin Requests allows you to configure the web API's security. It has to do with allowing other domains to make requests against your web API. For example, if you had your web API on one server and your web app on another you could configure CORS in your Web API to allow your web app to make calls to your web API.
-
-Yelp-fusion -
-
-bcrypt.js (post MVP) - this is a library that hashes passwords. It lets us store an encrypted password, not plain text, in our database by salting and hashing the password entered by the user.
-
-JWT (post MVP) - JSON Web Token is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret or a public/private key pair using RSA.
 
 Yelp Fusion API - this API allows us to get local content and user reviews from millions of businesses across 32 countries.
 
 Google Maps API/Platform - this API lets up display google maps on my app with most of it's rich functionalities.
+
+bcrypt.js (post MVP) - this is a library that hashes passwords. It lets us store an encrypted password, not plain text, in our database by salting and hashing the password entered by the user.
+
+JWT (post MVP) - JSON Web Token is an open standard that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret or a public/private key pair using RSA.
 
 #Milestone 1 User Stories
 1 - As a food truck lover, I want to go to a website to see food trucks in a desired area.
@@ -59,13 +57,8 @@ Wifeframes (use markdown-preview, "ctrl-shift-m")
 
 ## References:
 
-<<<<<<< HEAD
-Yelp Fusion API - https://www.yelp.com/developers/documentation/v3/business_search
-Google Maps API/Platform - https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/
-Google Map InfoWindow reference -
-https://github.com/tomchentw/react-google-maps/issues/753
-=======
 Yelp Fusion API: https://www.yelp.com/developers/documentation/v3/business_search
 Google Map API: https://www.fullstackreact.com/articles/how-to-write-a-google-maps-react-component/
 Google Map InfoWindow reference: https://github.com/tomchentw/react-google-maps/issues/753
->>>>>>> 31a1cfe58f5dc8ff3ec20bccd3720b4bac6ac12a
+
+> > > > > > > 31a1cfe58f5dc8ff3ec20bccd3720b4bac6ac12a

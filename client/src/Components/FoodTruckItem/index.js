@@ -1,8 +1,6 @@
 import React from "react";
-import "../../App.css";
 
 const FoodTruckItem = props => {
-  // const {name, categories, image_url, rating, review_count, display_address, zip_code, latitude, longitude} = props.foodTruckData
   const {
     name,
     image_url,

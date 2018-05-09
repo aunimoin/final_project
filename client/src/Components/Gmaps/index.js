@@ -1,14 +1,15 @@
 import React, { Component } from "react";
-import "../../App.css";
 import InfoWindowComp from "../InfoWindowComp";
 import { withGoogleMap, GoogleMap } from "react-google-maps";
 
+// most of this code is from the react-google-maps docs
 const MyMapComponent = withGoogleMap(props => (
   <GoogleMap center={props.center} zoom={12}>
     {props.markers}
   </GoogleMap>
 ));
-
+// NYC is the default, but upon loading Yelp API data, markers
+// are set and the map is centered around the first food truck
 class Gmaps extends Component {
   constructor(props) {
     super(props);

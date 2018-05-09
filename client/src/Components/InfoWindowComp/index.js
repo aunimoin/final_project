@@ -8,12 +8,12 @@ class InfoWindowComp extends Component {
       isOpen: false
     };
   }
+  // G-map marker and infowindow on click toggle
   handleToggleOpen = () => {
     this.setState({
       isOpen: true
     });
   };
-
   handleToggleClose = () => {
     this.setState({
       isOpen: false
