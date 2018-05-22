@@ -3,7 +3,7 @@ import FoodTruckList from "./Components/FoodTruckList";
 import FoodTruckItem from "./Components/FoodTruckItem";
 import Gmaps from "./Components/Gmaps";
 
-const yelp = require("yelp-fusion");
+// const yelp = require("yelp-fusion");
 
 class App extends Component {
   constructor(props) {
@@ -33,9 +33,9 @@ class App extends Component {
   // }
   apiData() {
     // console.log("this is data:", this.state.search);
-    // fetch(`http://localhost:3300/api/${this.state.search}`)
     // heroku will add the right path from the app - https://quiet-hollows-29178.herokuapp.com
     fetch(`/api/${this.state.search}`)
+      // fetch(`http://localhost:3300/api/${this.state.search}`)
       .then(res => res.json())
       .then(res => {
         this.setState({

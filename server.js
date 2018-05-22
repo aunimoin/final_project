@@ -44,6 +44,14 @@ app.get("/api/:location", food, (req, res) => {
   // console.log("this is req.body:", req.body);
   res.json(res.locals);
 });
+// when in production serve the client/build
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+  //to let react-router handle routing in prod.
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
+  });
+}
 
 app.listen(PORT, () => {
   console.log(`Connected now on port ${PORT}`);
