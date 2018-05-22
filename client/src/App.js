@@ -33,7 +33,9 @@ class App extends Component {
   // }
   apiData() {
     // console.log("this is data:", this.state.search);
-    fetch(`http://localhost:3300/api/${this.state.search}`)
+    // fetch(`http://localhost:3300/api/${this.state.search}`)
+    // heroku will add the right path from the app - https://quiet-hollows-29178.herokuapp.com
+    fetch(`/api/${this.state.search}`)
       .then(res => res.json())
       .then(res => {
         this.setState({

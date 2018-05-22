@@ -7,9 +7,16 @@
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.4",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "react-google-maps": "^9.4.5",
     "surge": "^0.20.1",
     "yelp-fusion": "^2.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

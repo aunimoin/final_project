@@ -4,9 +4,9 @@ const express = require("express");
 const yelp = require("yelp-fusion");
 const app = express();
 const cors = require("cors");
-
+const dotenv = require("dotenv").config();
 // set up port and listen (good practice to place it all the way at the bottow of the file)
-const PORT = 3300;
+const PORT = process.env.PORT || 3300;
 app.use(cors());
 app.options("*", cors());
 
@@ -14,8 +14,7 @@ app.options("*", cors());
 // from https://www.yelp.com/developers/v3/manage_app
 const food = (req, res, next) => {
   // Client ID = tYSQzk85DWsvdrmP5r2j7w
-  const apiKey =
-    "69L8kipx7CJ6r8hJl36vqp4c05VNv3xl9CgW9QpBCQQVAv9dh2x3Oje1ijvo-czD7larO1QONdK-F3JC7OP9tDzq2UsW62Ef7JpBsCXFT6Y65wNg49xSMhVtUibiWnYx";
+  const apiKey = process.env.YELP_API_KEY;
   // console.log("this is req.params.location", req.params.location);
   const searchRequest = {
     term: "food trucks stands carts street vendors",
